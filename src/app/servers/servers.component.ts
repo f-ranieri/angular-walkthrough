@@ -10,6 +10,8 @@ export class ServersComponent implements OnInit {
 
   serverCreationStatus = 'No servers has been created so far!';
 
+  newServerName = '';
+
   constructor() {}
 
   ngOnInit() {
@@ -20,5 +22,9 @@ export class ServersComponent implements OnInit {
 
   onCreateNewServer() {
     this.serverCreationStatus = 'There is at least one active server!';
+  }
+
+  onServerNameInput(event: Event): void {
+    this.newServerName = (<HTMLInputElement>event.target).value;
   }
 }

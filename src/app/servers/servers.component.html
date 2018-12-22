@@ -1,3 +1,9 @@
+<div class="form-group">
+  <label for="serverName">Name</label>
+  <input (input)="onServerNameInput($event)" type="text" class="form-control" name="serverName" aria-describedby="helpId" placeholder="">
+  <small id="helpId" class="form-text text-muted">The name of the server to be created</small>
+</div>
+<p>{{ newServerName }}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateNewServer()">New Server</button>
 <p [innerText]="serverCreationStatus"></p>
 <app-server></app-server>
